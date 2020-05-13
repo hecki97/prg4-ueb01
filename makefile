@@ -15,7 +15,13 @@ OBJECTS	 = $(filter-out ${BUILD_DIR}/main.o, $(patsubst ${SRC_DIR}/%.cpp,${BUILD
 DEBUG     = -O0 -g
 CXXFLAGS += $(addprefix -I,$(INCLUDES))
 CXXFLAGS += -std=c++2a -Wextra -Wall -pedantic -Werror
-CXXFLAGS += -fsanitize=address -fsanitize=undefined ${DEBUG}
+CXXFLAGS += $(DEBUG)
+
+# Address sanitizer and undefined behavior sanitizer are not supported on Windows
+ifneq ($(OS),Windows_NT)
+	CXXFLAGS += -fsanitize=address -fsanitize=undefined
+endif
+
 LDFLAGS  +=
 
 .PHONY: clean
