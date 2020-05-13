@@ -9,6 +9,12 @@
 #include <stdio.h>
 
 namespace bsort {
+    /**
+     Implementation of the bubble sort algorithm
+     @param array An (unsorted) int array
+     @param size Size of array
+     @returns Sorted int array
+    */
     int* sort(int array[], size_t size);
 }
 

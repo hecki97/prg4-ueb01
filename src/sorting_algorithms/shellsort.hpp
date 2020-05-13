@@ -12,6 +12,12 @@
 #include <algorithm>
 
 namespace ssort {
+    /**
+    * Implementation of the shell sort algorithm
+     @param array An (unsorted) int array
+     @param size Size of array
+     @returns Sorted int array
+    */
     int* sort(int array[], size_t size);
 }
 

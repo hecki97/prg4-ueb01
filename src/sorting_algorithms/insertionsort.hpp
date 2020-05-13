@@ -11,9 +11,10 @@
 namespace isort {
 
     /**
-     * Implementation of the insertion sort algorithm
-     * @param array A (unsorted) int vector
-     * @returns A sorted int vector
+      Implementation of the insertion sort algorithm
+      @param array An (unsorted) int array
+      @param size Size of array
+      @returns Sorted int array
      */
     int* sort(int array[], size_t size);
 }
